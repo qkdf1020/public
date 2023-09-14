@@ -30,16 +30,19 @@ def get_extract(images):
 
 
 def twe(num_A, num_B) :
-  df = pd.read_csv('C:/Users/qkdf1/Documents/public/Pokemon_image/data/pokemon.csv')
+  df = pd.read_csv('C:/Users/qkdf1/Documents/public/Pokemon_image/data/pokemon.csv').reset_index()
 
   features = []
   img_paths = []
 
   cur_dir = 'C:/Users/qkdf1/Documents/public/Pokemon_image/data/images/'
+  
+  p_name_1 = df.loc[num_A].tolist()[1]
+  p_name_2 = df.loc[num_A].tolist()[1]
 
-  for i in (num_A, num_B) :
+  for i in (p_name_1, p_name_2) :
     try :
-      image_path = cur_dir + str(i) + ".png"
+      image_path = cur_dir + str(i)+ ".png"
       img_paths.append(image_path)
 
       # Extract Features
