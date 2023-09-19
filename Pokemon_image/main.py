@@ -32,7 +32,7 @@ if A == 1 :
             print('같은 번호를 입력했습니다.')
     
         elif 0 <= num_B < 809 :
-            job_1(num_A, num_B)
+            model.job_1(num_A, num_B)
 
 
 # 이름으로 비교
@@ -40,7 +40,7 @@ elif A == 2 :
     name_A = str(input('1. 포켓몬 이름을 입력해주세요 : '))
     name_B = str(input('2. 포켓몬 이름을 입력해주세요 : '))
     try :
-        job_2(name_A, name_B)
+        model.job_2(name_A, name_B)
     
     except :
         raise Exception
@@ -51,7 +51,7 @@ elif A == 3 :
     print('선택이 완료 되었습니다.\t잠시만 기다려주세요')
     Pokemon = str(input('포켓몬 이름을 입력해주세요 :'))
     try :
-        job_3(Pokemon)
+        model.job_3(Pokemon)
     
     except :
         raise Exception
