@@ -32,19 +32,19 @@ def get_extract(images):
 
 
 def job_1(num_A, num_B) :
-  df = pd.read_csv('C:/Users/qkdf1/Documents/public/Pokemon_image/data/pokemon.csv')
+  df = pd.read_csv('./data/pokemon.csv')
 
   features = []
   img_paths = []
 
-  cur_dir = 'C:/Users/qkdf1/Documents/public/Pokemon_image/data/images/'
+  img_dir = './data/images/'
   
   p_name_1 = df.loc[num_A].tolist()[0]
   p_name_2 = df.loc[num_B].tolist()[0]
 
   for i in (p_name_1, p_name_2) :
     try :
-      image_path = cur_dir + str(i)+ ".png"
+      image_path = img_dir + str(i)+ ".png"
       img_paths.append(image_path)
 
       # Extract Features
@@ -52,9 +52,9 @@ def job_1(num_A, num_B) :
       features.append(feature)
 
     except :
-      image_path = cur_dir + str(i) + ".jpg"
+      image_path = img_dir + str(i) + ".jpg"
       img_paths.append(image_path)
-      image_path_r = cur_dir + str(i) + ".png"
+      image_path_r = img_dir + str(i) + ".png"
       img_paths.remove(image_path_r)
 
       # Extract Features50
@@ -75,17 +75,17 @@ def job_1(num_A, num_B) :
 
 
 def job_2(name_A, name_B) :
-  df = pd.read_csv('C:/Users/qkdf1/Documents/public/Pokemon_image/data/pokemon.csv').reset_index()
+  df = pd.read_csv('./data/pokemon.csv').reset_index()
 
   features = []
   img_paths = []
 
-  cur_dir = 'C:/Users/qkdf1/Documents/public/Pokemon_image/data/images/'
+  img_dir = './data/images/'
   
 
   for i in (name_A, name_B) :
     try :
-      image_path = cur_dir + str(i)+ ".png"
+      image_path = img_dir + str(i)+ ".png"
       img_paths.append(image_path)
 
       # Extract Features
@@ -93,9 +93,9 @@ def job_2(name_A, name_B) :
       features.append(feature)
 
     except :
-      image_path = cur_dir + str(i) + ".jpg"
+      image_path = img_dir + str(i) + ".jpg"
       img_paths.append(image_path)
-      image_path_r = cur_dir + str(i) + ".png"
+      image_path_r = img_dir + str(i) + ".png"
       img_paths.remove(image_path_r)
 
       # Extract Features
@@ -122,16 +122,16 @@ def job_2(name_A, name_B) :
 
 
 def job_3(Pokemon) :
-  df = pd.read_csv('C:/Users/qkdf1/Documents/public/Pokemon_image/data/pokemon.csv')
+  df = pd.read_csv('./data/pokemon.csv')
 
   features = []
   img_paths = []
 
-  cur_dir = 'C:/Users/qkdf1/Documents/public/Pokemon_image/data/images/'
+  img_dir = './data/images/'
 
   for i in df['Name'] :
     try :
-      image_path = cur_dir + str(i) + ".png"
+      image_path = img_dir + str(i) + ".png"
       img_paths.append(image_path)
 
       # Extract Features
@@ -139,9 +139,9 @@ def job_3(Pokemon) :
       features.append(feature)
 
     except :
-      image_path = cur_dir + str(i) + ".jpg"
+      image_path = img_dir + str(i) + ".jpg"
       img_paths.append(image_path)
-      image_path_r = cur_dir + str(i) + ".png"
+      image_path_r = img_dir + str(i) + ".png"
       img_paths.remove(image_path_r)
 
       # Extract Features
@@ -159,9 +159,9 @@ def job_3(Pokemon) :
   # Insert the image query
  
   try :
-      img = Image.open(cur_dir + Pokemon + '.png')
+      img = Image.open(img_dir + Pokemon + '.png')
   except :
-      img = Image.open(cur_dir + Pokemon + '.jpg')
+      img = Image.open(img_dir + Pokemon + '.jpg')
 
   # Extract its features
 

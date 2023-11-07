@@ -1,3 +1,5 @@
+# 해당 파일은 python 3.8.17에서 작성 되었습니다.
+
 DB_SETTINGS = {
     'source_db_localhost_rdb' : {
         'host' : "127.0.0.1",
