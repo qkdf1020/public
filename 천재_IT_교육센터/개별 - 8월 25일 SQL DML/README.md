@@ -1,5 +1,5 @@
 # 2022년 분기 별 (총 4분기) 콘텐츠 이용 실태 조사
-## 초등 3학년, 4학년, 5학년, 6학년을 대상으로 하는 콘텐츠 중 영상강의 + 문제풀이 가 함께 서비스되는 콘텐츠 중 아래의 사항을 확인할 수 있는 SQL 쿼리 작성
+## 초등 3학년, 4학년, 5학년, 6학년을 대상으로 하는 콘텐츠 중 영상강의 + 문제풀이 가 함께 서비스되는 콘텐츠 중 아래의 사항을 확인할 수 있는 sql 쿼리 작성
 1. 콘텐츠 별 학습을 진행한 학생 수
 2. 콘텐츠 별 학습을 진행한 학생의 학년 평균
 3. 콘텐츠 별 학습시간
@@ -10,7 +10,7 @@ e_content_meta, e_member, e_test, e_media, e_study, e_learning_time_proc
 
 
 
-'''SQL
+'''sql
 SELECT med.yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , con.mcode AS "콘텐츠 코드명"
@@ -68,7 +68,7 @@ HAVING med.yyyy = '2022' -- 원하는 연도 값 입력
 
 
 
-'''SQL
+'''sql
 SELECT YEAR(stu.enddate) AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , con.mcode AS "콘텐츠 코드명"
@@ -126,7 +126,7 @@ ORDER BY "진행한 학생 수" DESC
 
 
 
-'''SQL
+'''sql
 SELECT yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , mcode AS "콘텐츠 코드명"
@@ -179,7 +179,7 @@ ORDER BY "진행한 학생 수" DESC
 
 
 
-'''SQL
+'''sql
 SELECT yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , mcode AS "콘텐츠 코드명"
