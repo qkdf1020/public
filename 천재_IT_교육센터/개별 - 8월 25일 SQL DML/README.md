@@ -10,7 +10,7 @@ e_content_meta, e_member, e_test, e_media, e_study, e_learning_time_proc
 
 
 
-'''sql
+```sql
 SELECT med.yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , con.mcode AS "콘텐츠 코드명"
@@ -64,11 +64,11 @@ HAVING med.yyyy = '2022' -- 원하는 연도 값 입력
     AND QUARTER(stu.enddate) = 1 -- 원하는 분기 값 입력
 -- ORDER BY "진행한 학생 수" DESC
 ;
-'''
+```
 
 
 
-'''sql
+```sql
 SELECT YEAR(stu.enddate) AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , con.mcode AS "콘텐츠 코드명"
@@ -122,11 +122,11 @@ HAVING YEAR(stu.enddate) = 2022 -- 원하는 연도 값 입력
     AND QUARTER(stu.enddate) = 1 -- 원하는 분기 값 입력
 ORDER BY "진행한 학생 수" DESC
 ;
-'''
+```
 
 
 
-'''sql
+```sql
 SELECT yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , mcode AS "콘텐츠 코드명"
@@ -175,11 +175,11 @@ HAVING yyyy = '2022' -- 원하는 연도 값 입력
     AND QUARTER(stu.enddate) = 1 -- 원하는 분기 값 입력
 ORDER BY "진행한 학생 수" DESC
 ;
-'''
+```
 
 
 
-'''sql
+```sql
 SELECT yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
     , mcode AS "콘텐츠 코드명"
@@ -228,4 +228,4 @@ HAVING yyyy = '2022' -- 원하는 연도 값 입력
     AND QUARTER(stu.enddate) = 1 -- 원하는 분기 값 입력
 ORDER BY "진행한 학생 수" DESC
 ;
-'''
+```
