@@ -1,3 +1,5 @@
+# python 3.10.9에서 작성 되었습니다.
+
 import requests
 from tokens import APIS
 
