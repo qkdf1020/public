@@ -1,4 +1,4 @@
-# python 3.10.9 버전에서 실행 하였습니다.
+# python 3.10.9에서 작성 되었습니다.
 
 from model import model
 
