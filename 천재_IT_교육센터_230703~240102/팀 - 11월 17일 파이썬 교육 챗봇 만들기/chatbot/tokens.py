@@ -7,11 +7,11 @@
 # 5. F12  > Application -> Storage -> Cookies -> 'https://bard.google.com'의 _Secure-1PSID 에 있는 값을 키값
 
 APIS = {
-    'bard_api' : '',
-    'palm_api' : '',
-    'OpenAI_api' : '',
+    'bard_api' : "",
+    'palm_api' : "",
+    'OpenAI_api' : "",
     "X_Naver_Client" : {
         'X-Naver-Client-Id' : "",
-        'X-Naver-Client-Secret' : ""
+        'X-Naver-Client-Secret' : "",
         },
 }
