@@ -1,4 +1,4 @@
-# 해당 파일은 python 3.8.17에서 작성 되었습니다.
+# python 3.8.17에서 작성 되었습니다.
 
 import sys
 import click
