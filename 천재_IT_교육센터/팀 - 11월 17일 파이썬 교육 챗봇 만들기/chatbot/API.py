@@ -100,7 +100,7 @@ def OpenAI_api(question : str):
     response = openai.Completion.create(
         engine="text-davinci-003",
         prompt=question,
-        max_tokens=150
+        max_tokens=150 # 최대 답변 글자수
     )
     
     # API 응답에서 답변 추출
