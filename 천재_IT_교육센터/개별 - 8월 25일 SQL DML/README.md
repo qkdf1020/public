@@ -9,7 +9,7 @@
 e_content_meta, e_member, e_test, e_media, e_study, e_learning_time_proc
 
 
-
+## 쿼리문
 ```sql
 SELECT med.yyyy AS "연도"
     , QUARTER(stu.enddate) AS "분기"
