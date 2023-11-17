@@ -5,7 +5,7 @@ from tokens import APIS
 
 
 
-def translate_ko2en(question):
+def translate_ko2en(question : str):
     """
     Input
         1) question (str) :
@@ -32,7 +32,7 @@ def translate_ko2en(question):
         print("Error Code:" , rescode)
 
 
-def translate_en2ko(answer):
+def translate_en2ko(answer : str):
     """
     Input
         1) answer (str) :
