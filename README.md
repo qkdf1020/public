@@ -7,6 +7,9 @@
 - 8월 25일 개별 프로젝트 : SQL DML
 - 9월 1일 개별 프로젝트 : 머신러닝 일차별 과제
 - 9월 8일 개별 프로젝트 : yes24 요청 형태로 데이터 적재
+- 9월 15일 개별 프로젝트 : 포켓몬 이미지 유사도
+- 10월 27일 개별 프로젝트 : 차량 번호판 인식
+- 
 - 
 
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/>&nbsp;
