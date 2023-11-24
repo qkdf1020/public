@@ -10,6 +10,6 @@
 - 9월 8일 개별 프로젝트 : yes24 요청 형태로 데이터 적재
 - 9월 15일 개별 프로젝트 : 포켓몬 이미지 유사도
 - 10월 27일 개별 프로젝트 : 차량 번호판 인식
-- 11월 17일 팀 프로젝트 : 파이썬 교육 쳇봇 만들기
+- 11월 17일 팀 프로젝트 : 파이썬 교육 챗봇 만들기
 
 <img src="https://img.shields.io/badge/Python-3766AB?style=flat-square&logo=Python&logoColor=white"/>&nbsp;
