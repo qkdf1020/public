@@ -1,5 +1,3 @@
-# python 3.10.9에서 작성 되었습니다.
-
 import requests
 from tokens import APIS
 
@@ -22,10 +20,10 @@ def translate_ko2en(question : str):
 
     header = APIS['X_Naver_Client']
 
-    response = requests.post(url, headers=header, data= data)
+    response = requests.post(url, headers = header, data = data)
     rescode = response.status_code
 
-    if(rescode==200):
+    if(rescode == 200):
         t_data = response.json()
         return response.json()['message']['result']['translatedText']
     else:
@@ -49,10 +47,10 @@ def translate_en2ko(answer : str):
 
     header = APIS['X_Naver_Client']
 
-    response = requests.post(url, headers=header, data= data)
+    response = requests.post(url, headers = header, data = data)
     rescode = response.status_code
 
-    if(rescode==200):
+    if(rescode == 200):
         t_data = response.json()
         return response.json()['message']['result']['translatedText']
     else:

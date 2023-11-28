@@ -1,5 +1,3 @@
-# python 3.10.9에서 작성 되었습니다.
-
 # bard
 from bardapi import Bard
 import os
@@ -100,9 +98,9 @@ def OpenAI_api(question : str):
     
     # OpenAI API에 요청 보내기
     response = openai.Completion.create(
-        engine="text-davinci-003",
-        prompt=question,
-        max_tokens=150 # 최대 답변 글자수
+        engine = "text-davinci-003",
+        prompt = question,
+        max_tokens = 150 # 최대 답변 글자수
     )
     
     # API 응답에서 답변 추출
