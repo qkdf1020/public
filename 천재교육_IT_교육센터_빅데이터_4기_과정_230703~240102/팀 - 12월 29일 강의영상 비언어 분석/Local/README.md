@@ -1,5 +1,5 @@
 # 로컬에서의 분석을 위한 코드
-> Local_main_720.ipynb
+> Local_main_720.ipynb  
 각 랜드 마크 번호
 ```
 얼굴
@@ -59,7 +59,7 @@ json_folder_path = "경로"
 
 lm.video2json_folder_720(video_folder_path, json_folder_path, points)
 ```
-`video_folder_path = "경로"` 해당 경로 하위에 있는 영상들에 대해 작업하고 하위 폴더 내의 영상들에 대해서 작업을 합니다.
+* `video_folder_path = "경로"` 해당 경로 하위에 있는 영상들에 대해 작업하고 하위 폴더 내의 영상들에 대해서 작업을 합니다.
 
-`json_folder_path = "경로"` 영상에서 추출한 랜드마크 데이터를 json파일로 저장할 경로 지정합니다.  
+* `json_folder_path = "경로"` 영상에서 추출한 랜드마크 데이터를 json파일로 저장할 경로 지정합니다.  
 지정한 경로에 `video_folder_path` 하위에 있는 파일은 해당 경로에 저장하고, 하위에 있는 강좌명으로 된 폴더를 만들고 해당 폴더에 저장합니다.
