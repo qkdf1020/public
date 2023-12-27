@@ -1,7 +1,19 @@
 # AWS 환경에서 S3와 RDS
-## user.py
-입력 받은 유저의 영상을 다운로드 받아서 상반신의 랜드마크 포인트값을 RDS에 저장한다.
-## heatmap.py
+## user.ipynb
+지정된 버킷의 경로에 있는 영상을 다운로드 받고 랜드마크 정보를 추출 후 다운로드한 영상을 삭제하고 RDS에 적재한다.  
+`bucket_name` = 버킷 이름
+`s3_object_key` = 영상이 있는 버킷 내의 경로
+```python
+import user
+
+# 버킷 내의 경로
+bucket_name = "버킷 이름"
+s3_object_key = "경로와 파일 이름"
+
+filename, json_data = user.s3_lmp(bucket_name, s3_object_key)
+user.user_rds_load(filename, json_data)
+```
+## heatmap.ipynb
 RDS에 저장되어 있는 데이터를 가지고 heatmap 그래프를 시각화함
 * `table_name` = 시각화할 데이터를 조회할 테이블 이름
 * `teacher` = 시각화할 강사의 이름
