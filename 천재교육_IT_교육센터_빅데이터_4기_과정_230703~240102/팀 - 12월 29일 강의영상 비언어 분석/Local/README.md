@@ -1,6 +1,6 @@
 # 로컬에서의 분석을 위한 코드
 > Local_main_720.ipynb  
-각 랜드 마크 번호
+* 각 랜드 마크 번호
 ```
 얼굴
 0 - nose / 코
@@ -39,7 +39,7 @@
 31 - left foot index / 왼쪽 발끝
 32 - right foot index / 오른쪽 발끝
 ```
-`lmpns = []` 추출할 랜드마크 포인트를 리스트에 넣는다.  
+* `lmpns = []` 추출할 랜드마크 포인트를 리스트에 넣는다.  
 ```python
 # 랜드마크 포인트
 lmpns = [list(range(23))]
