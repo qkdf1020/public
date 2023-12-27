@@ -1,5 +1,5 @@
 # 로컬에서의 분석을 위한 코드
-> Local_main_720.ipynb  
+## Local_main_720.ipynb  
 * 각 랜드 마크 번호
 ```
 얼굴
