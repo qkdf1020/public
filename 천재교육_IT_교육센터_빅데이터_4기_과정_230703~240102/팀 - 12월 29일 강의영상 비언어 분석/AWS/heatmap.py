@@ -1,8 +1,8 @@
 import math
 import numpy as np
-import mysql.connector
-import plotly as plt
 import seaborn as sns
+import mysql.connector
+import matplotlib.pyplot as plt
 
 import sys
 

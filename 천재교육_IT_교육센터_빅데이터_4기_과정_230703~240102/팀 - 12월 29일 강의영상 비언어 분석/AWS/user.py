@@ -140,7 +140,7 @@ def s3_lmp(s3_object_key : str) :
     s3 = boto3.client('s3', **S3)
 
     # S3 버킷 이름과 다운로드할 객체 키
-    bucket_name = 'team3-test-videos'
+    bucket_name = 'big4-team3'
 
     # 로컬에 저장할 경로 및 파일명
     local_folder_path = os.getcwd()
@@ -251,8 +251,38 @@ def user_rds_load(filename, json_data) :
     connection.close()
 
 
+def get_latest_video_name(bucket_name):
+    """
+    Input
+        1) bucket_name (str) :
+            작업할 버킷의 경로
+        
+        2) latest_video_name (str):
+            해당 버킷에 마지막으로 적재된 데이터
+    """
+    s3 = boto3.client('s3', aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"), aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"))
+    
+    # S3 버킷 내에서 객체 목록을 가져옴
+    response = s3.list_objects(Bucket=bucket_name)
+    
+    # 가장 최근에 업로드된 객체 선택
+    latest_object = max(response['Contents'], key=lambda x: x['LastModified'])
+    
+    # 파일 이름 반환 (확장자 제외)
+    latest_video_name = os.path.splitext(os.path.basename(latest_object['Key']))[0]
+    
+    return latest_video_name
+
+
 if __name__ == "__main__" :
-    # s3_object_key 환경 변수의 값을 얻음
-    s3_object_key = os.environ.get('s3_object_key')
-    filename, json_data = s3_lmp(s3_object_key)
+    # S3 버킷 이름
+    print("os.environ: ", os.environ)
+    bucket_name = "big4-team3"
+    
+    # 최근에 업로드된 동영상 이름 가져오기
+    latest_video_name = get_latest_video_name(bucket_name)
+    print('latest_video_name : ', latest_video_name)
+    
+    # 모듈 실행
+    filename, json_data = s3_lmp(latest_video_name)
     user_rds_load(filename, json_data)
