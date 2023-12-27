@@ -1,30 +1,5 @@
 # 로컬에서의 분석을 위한 코드
 > Local_main_720.ipynb
-```python
-import Local_main_720 as lm
-
-# 폴더 경로 설정
-video_folder_path = "경로"
-json_folder_path = "경로"
-
-lm.video2json_folder_720(video_folder_path, json_folder_path, points)
-```
-`video_folder_path = "경로"` 해당 경로 하위에 있는 영상들에 대해 작업하고 하위 폴더 내의 영상들에 대해서 작업을 합니다.
-
-`json_folder_path = "경로"` 영상에서 추출한 랜드마크 데이터를 json파일로 저장할 경로 지정합니다.  
-지정한 경로에 `video_folder_path` 하위에 있는 파일은 해당 경로에 저장하고, 하위에 있는 강좌명으로 된 폴더를 만들고 해당 폴더에 저장합니다.
-
-`lmpns = []` 추출할 랜드마크 포인트를 리스트에 넣는다.  
-```python
-# 랜드마크 포인트
-lmpns = [list(range(23))]
-points = []
-
-for lmpn in lmpns :
-    points.extend([lmpn * 2, (lmpn * 2) + 1])
-
-print("선택된 랜드마크 :", lmpns)
-```
 각 랜드 마크 번호
 ```
 얼굴
@@ -64,3 +39,27 @@ print("선택된 랜드마크 :", lmpns)
 31 - left foot index / 왼쪽 발끝
 32 - right foot index / 오른쪽 발끝
 ```
+`lmpns = []` 추출할 랜드마크 포인트를 리스트에 넣는다.  
+```python
+# 랜드마크 포인트
+lmpns = [list(range(23))]
+points = []
+
+for lmpn in lmpns :
+    points.extend([lmpn * 2, (lmpn * 2) + 1])
+
+print("선택된 랜드마크 :", lmpns)
+```
+```python
+import Local_main_720 as lm
+
+# 폴더 경로 설정
+video_folder_path = "경로"
+json_folder_path = "경로"
+
+lm.video2json_folder_720(video_folder_path, json_folder_path, points)
+```
+`video_folder_path = "경로"` 해당 경로 하위에 있는 영상들에 대해 작업하고 하위 폴더 내의 영상들에 대해서 작업을 합니다.
+
+`json_folder_path = "경로"` 영상에서 추출한 랜드마크 데이터를 json파일로 저장할 경로 지정합니다.  
+지정한 경로에 `video_folder_path` 하위에 있는 파일은 해당 경로에 저장하고, 하위에 있는 강좌명으로 된 폴더를 만들고 해당 폴더에 저장합니다.
