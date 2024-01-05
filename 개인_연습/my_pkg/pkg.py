@@ -23,6 +23,9 @@ def cur_dir_1() -> None:
     # 현재 디렉토리 내의 파일과 하위 디렉토리 목록 -> 리스트로 반환
     dir_list = os.listdir(cur_directory)
     print('\n현재 디렉토리 내의 파일과 하위 디렉토리 목록 :\n', dir_list)
+    
+    return dir_list
+
 
 def cur_dir_2(directory_name : str):
     """
@@ -36,8 +39,11 @@ def cur_dir_2(directory_name : str):
     dir_listdir = os.path.join(os.getcwd(), directory_name)
     data_list = os.listdir(dir_listdir)
     print(f'\n{dir_listdir} 내의 파일과 하위 디렉토리 목록 :\n', data_list)
+    
+    return data_list
 
-def dir_csv_excel(directory_name : str, index_col : int | str = None, encoding : str = None):
+
+def dir_csv_excel(directory_name : str, index_col : int or str = None, encoding : str = None):
     """
     Input
         1) directory_name (str) :
@@ -66,11 +72,14 @@ def dir_csv_excel(directory_name : str, index_col : int | str = None, encoding :
             if data.lower().endswith('.csv'): # csv 파일만
                 print(data) # csv 파일들 출력
                 dataset[data] = pd.read_csv(os.path.join(dir_listdir, data), index_col = index_col, encoding = encoding)
+            
             elif data.lower().endswith('.xls') or data.lower().endswith('.xlsx'):
                 print('/n', data) # excel 파일들 출력
                 dataset[data] = pd.read_excel(os.path.join(dir_listdir, data), index_col = index_col)
+    
     except Exception as e:
         print(e)
+        
     return dataset
 
 def check_df(df):
